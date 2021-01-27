@@ -62,7 +62,7 @@ class Quote(Resource):
           "quote": params["quote"]
       }
       
-      ai_quotes.append(quote)
+      author_quotes.append(quote)
       return quote, 201
 
     def delete(self, id):
