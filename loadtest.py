@@ -78,7 +78,4 @@ def delete_test():
         print(delete_message.text)
         time.sleep(next_send)
 
-        
-
-
 main()
