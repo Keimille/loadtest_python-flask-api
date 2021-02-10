@@ -1,21 +1,19 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
+from flask_mysqldb import MySQL
 import random
 
 app = Flask(__name__)
 api = Api(app)
 
-@app.route('/')
-def loadtesterapp():
-    return "This is the loadtest app"
-author_quotes = [
-    {"id": 0, "author": "A.W. Tozer", "quote": "Only an evil desire to shine \
-        makes us want to appear other than we are."},
-    {"id": 1, "author": "G.K. Chesterton", "quote": "Truth, of course, must of necessity \
-        be stranger than fiction, for we have made fiction to suit ourselves."},
-    {"id": 3, "author": "Upton Sinclair", "quote": "It is difficult to get a man to understand something, \
-        when his salary depends on his not understanding it."},
-]
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = "root"
+app.config['MYSQL_PASSWORD'] = "root"
+app.config['MYSQL_DB'] = "MyDB"
+
+mysql = MySQL(app)
+
+
 
 class Quote(Resource):
 
