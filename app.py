@@ -5,6 +5,9 @@ import random
 app = Flask(__name__)
 api = Api(app)
 
+@app.route('/')
+def loadtesterapp():
+    return "This is the loadtest app"
 author_quotes = [
     {"id": 0, "author": "A.W. Tozer", "quote": "Only an evil desire to shine \
         makes us want to appear other than we are."},
