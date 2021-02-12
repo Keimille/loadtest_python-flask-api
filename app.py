@@ -5,16 +5,17 @@ import random
 app = Flask(__name__)
 api = Api(app)
 
-@app.route('/')
+@app.route('/home')
 def loadtesterapp():
-    return "This is the loadtest app"
+    return """<h1>Faker Load Tester App</h1>
+    <body>
+    <p>You have succesfully loaded the loadtester app. Now try making some calls to your api</p>
+    </body>
+    """
 author_quotes = [
-    {"id": 0, "author": "A.W. Tozer", "quote": "Only an evil desire to shine \
-        makes us want to appear other than we are."},
-    {"id": 1, "author": "G.K. Chesterton", "quote": "Truth, of course, must of necessity \
-        be stranger than fiction, for we have made fiction to suit ourselves."},
-    {"id": 3, "author": "Upton Sinclair", "quote": "It is difficult to get a man to understand something, \
-        when his salary depends on his not understanding it."},
+    {"id": 0, "author": "A.W. Tozer", "quote": "Only an evil desire to shine makes us want to appear other than we are."},
+    {"id": 1, "author": "G.K. Chesterton", "quote": "Truth, of course, must of necessity be stranger than fiction, for we have made fiction to suit ourselves."},
+    {"id": 3, "author": "Upton Sinclair", "quote": "It is difficult to get a man to understand something, when his salary depends on his not understanding it."},
 ]
 
 class Quote(Resource):
