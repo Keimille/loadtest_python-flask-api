@@ -24,7 +24,7 @@ This repo includes a dockerfile with all the dependencies
 #### Developing on Mac (Requirements)
 In order to develop for the DB version of the app, you must use install the flask_mysqldb. In order to install this module you will need mysql and mysqlclient installed. You can install both using Homebrew
 
-### Rub DB Version With Docker
+### Run DB Version With Docker
 For DB version, follow the same steps as listed above with docker but within the DB_APP folder. You will run the command `python3 app_db.py` instead of `python3 app.py'
 
 #### Steps
