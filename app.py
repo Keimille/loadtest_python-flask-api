@@ -2,6 +2,9 @@ from flask import Flask
 from flask_restful import Api, Resource, reqparse
 import random
 
+
+
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -77,4 +80,4 @@ class Quote(Resource):
 api.add_resource(Quote, "/author-quotes", "/author-quotes/", "/author-quotes/<int:id>")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port = 80, debug=True)
